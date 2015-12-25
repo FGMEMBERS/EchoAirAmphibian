@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <entry>
+        <ind>0.000</ind>
+        <dep>-1.000</dep>
+    </entry>
+    <entry>
+        <ind>0.5</ind>
+        <dep>0</dep>
+    </entry>
+    <entry>
+        <ind>1</ind>
+        <dep>1</dep>
+    </entry>
+
+</PropertyList>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>lamp.ac</path>
+
+  <animation>
+    <object-name>lamp</object-name>
+    <object-name>LED</object-name>
+    <object-name>button</object-name>
+    <object-name>fix</object-name>
+  </animation>
+
+  
+  <animation>
+    <type>material</type>
+    <object-name>LED</object-name>
+    <condition>
+<and>
+      <property>/controls/electric/battery-switch</property>
+<property>/controls/lighting/instrument-lights</property>
+</and>
+    </condition>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1</blue>
+    </emission>
+  </animation>
+
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/instrument-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+<type>translate</type>
+<object-name>button</object-name>
+<property>/controls/lighting/instrument-lights</property>
+<factor>0.001</factor>
+<axis>
+<x>-1</x>
+</axis>
+</animation><!--
+<animation>
+<type>material</type>
+<condition>
+<property>/controls/electric/instrument-lights</property>
+</condition>-->
+
+</PropertyList>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>engine.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>instrument</object-name><!--
+  <object-name>Needle</object-name>-->
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.0</blue>
+   <factor-prop>/sim/model//material/instruments/factor</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>thrust_needle</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+  <factor>165</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.00429</x-m>
+   <y-m>-0.02882</y-m>
+   <z-m>-0.00178</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+
+ </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>rpm_needle</object-name>
+  <property>/engines/engine[0]/rpm</property>
+  <factor>0.05</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.00429</x-m>
+   <y-m>0.02944</y-m>
+   <z-m>-0.00178</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>battc_needle</object-name>
+  <property>/engines/engine[0]/rpm</property>
+  <factor>0.05</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.00429</x-m>
+   <y-m>0.02944</y-m>
+   <z-m>-0.00178</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+
+ </animation>
+</PropertyList>
+
+

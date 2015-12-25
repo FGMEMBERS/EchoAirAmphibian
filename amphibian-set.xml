@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<PropertyList include="amphibian-base.xml">
+    <sim>
+        <description>EchoAir Amphibian</description>
+   
+         <flight-model>yasim</flight-model>
+        <aero>amphibian</aero>
+        <fuel-fraction>0.5</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/EchoAirAmphibian/splash.png</splash-texture>
+        </startup>
+
+
+    <!--<engines>
+        <engine n="0">
+            <thruster>
+                <torque type="float">0.0</torque>
+            </thruster>
+        </engine>
+        <engine n="1">
+            <thruster>
+                <torque type="float">0.0</torque>
+            </thruster>
+        </engine>
+    </engines>-->
+<instrumentation>
+    <mk-viii>                          <!-- http://wiki.flightgear.org/index.php/GPWS -->
+      <serviceable>true</serviceable>  <!-- EGPWS_ENABLE -->
+      <configuration-module>
+       <category-1>   1 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+       <category-8>   3 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+      </configuration-module>
+      <inputs>                         <!-- Module I/O -->
+       <arinc429>
+        <decision-height-ncd> false </decision-height-ncd>
+        <decision-height>150</decision-height>
+       </arinc429>
+      </inputs>
+          <speaker>
+                <volume>1</volume>
+                <max-dist>2</max-dist>
+                <reference-dist>0.5</reference-dist>
+                <position>
+                    <x>-4.5</x>
+                    <y>0</y>
+                    <z>0.5</z>
+                </position>
+          </speaker>
+    </mk-viii>
+    <eng-gauge>
+        <itt n="0" type="double">0</itt>
+        <itt n="1" type="double">0</itt>
+        <torque n="0" alias="/engines/engine/torque-ftlb"/>
+        <torque n="1" alias="/engines/engine[1]/torque-ftlb"/>
+        <prop n="0" alias="/engines/engine/rpm"/>
+        <prop n="1" alias="/engines/engine[1]/rpm"/>
+        <turbine n="0" alias="/engines/engine/n1"/>
+        <turbine n="1" alias="/engines/engine[1]/n1"/>
+        <fuel-pph n="0" type="double">0</fuel-pph>
+        <fuel-pph n="1" type="double">0</fuel-pph>
+        <oil-psi-norm n="0" type="double">0</oil-psi-norm>
+        <oil-psi-norm n="1" type="double">0</oil-psi-norm>
+        <oil-temp-norm n="0" type="double">0</oil-temp-norm>
+        <oil-temp-norm n="1" type="double">0</oil-temp-norm>
+    </eng-gauge>
+    <fuel-gauge>
+        <LH-qty type="double">0</LH-qty>
+        <RH-qty type="double">0</RH-qty>
+    </fuel-gauge>
+    </instrumentation> 
+<systems>      
+<property-rule n="101">
+  <name>altitude-agl-m</name>
+  <path>Systems/altAGL.xml</path>
+</property-rule>
+</systems>
+</sim>
+
+
+   
+    <nasal>
+<doj>
+      <file>Nasal/crane-action.nas</file>
+      <file>Nasal/hold-pos.nas</file>
+</doj>
+    <doors>
+      <file>Nasal/doors.nas</file>
+    </doors>
+        <systems>
+            <file>Nasal/Electrical.nas</file>
+            <file>Nasal/systems.nas</file>
+            <file>Nasal/light.nas</file>
+        </systems>
+      <!--  <dialogs>
+            <file>Nasal/dialogs.nas</file>
+        </dialogs>
+        <FCS>
+            <file>Nasal/flightdirector.nas</file>
+        </FCS>-->
+    </nasal>
+
+</PropertyList>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <params>
+        <m-wing-dry-kg type="double">12000.</m-wing-dry-kg>
+        <K type="double">259.</K>
+        <D type="double">12.</D>
+        <fuel-frac type="double">0.375</fuel-frac>
+       <lift-node-lbs alias="/fdm/jsbsim/forces/fbz-aero-lbs"/>
+    </params>
+</PropertyList>

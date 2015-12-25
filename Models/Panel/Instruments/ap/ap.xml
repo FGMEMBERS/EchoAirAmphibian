@@ -1,0 +1,259 @@
+<PropertyList>
+<path>ap.ac</path>
+<!--<animation>
+  <type>material</type>
+  <object-name>gearFind</object-name>
+  <object-name>gearLind</object-name>
+  <object-name>gearRind</object-name>
+  <object-name>gearF.001</object-name>
+  <object-name>gearL.001</object-name>
+  <object-name>gearR.001</object-name>
+  <ambient>
+   <red>0.5</red>
+   <green>0.5</green>
+   <blue>0.5</blue>
+  </ambient>
+ </animation>-->
+<animation>
+  <type>material</type>
+  <object-name>APlight</object-name>
+<condition><not>
+        <property>/autopilot/locks/passive-mode</property></not>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>ALTlight</object-name>
+<condition><and><not>
+        <property>/autopilot/locks/passive-mode</property></not>
+<property>/autopilot/locks/altitude-button</property>
+</and></condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>GSlight</object-name>
+<condition><and><not>
+        <property>/autopilot/locks/passive-mode</property></not>
+<property>/autopilot/locks/gs-button</property>
+</and></condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>HDGlight</object-name>
+<condition><and><not>
+        <property>/autopilot/locks/passive-mode</property></not>
+<property>/autopilot/locks/hdg-button</property>
+</and></condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>VORlight</object-name>
+<condition><and><not>
+        <property>/autopilot/locks/passive-mode</property></not>
+<property>/autopilot/locks/vor-button</property>
+</and></condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>AP</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-cycle</command>
+        <property>/autopilot/locks/passive-mode</property>
+  <value type="string">0</value>
+  <value type="string">1</value>
+      </binding>
+    </action>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>AP</object-name>
+<property>/autopilot/locks/passive-mode</property>
+<factor>0.001</factor>
+<axis><x>0.5</x>
+<z>0.5</z></axis>
+  </animation>
+<animation>
+  <type>pick</type>
+  <object-name>ALT</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-cycle</command>
+        <property>/autopilot/locks/altitude</property>
+  <value type="string"></value>
+  <value type="string">altitude-hold</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/locks/altitude-button</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>ALT</object-name>
+        <property>/autopilot/locks/altitude-button</property>
+<factor>-0.001</factor>
+<axis><x>0.5</x>
+<z>0.5</z></axis>
+  </animation>
+<animation>
+  <type>pick</type>
+  <object-name>GS</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-cycle</command>
+        <property>/autopilot/locks/altitude</property>
+  <value type="string">altitude-hold</value>
+  <value type="string">gs1-hold</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/locks/gs-button</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>GS</object-name>
+        <property>/autopilot/locks/gs-button</property>
+<factor>-0.001</factor>
+<axis><x>0.5</x>
+<z>0.5</z></axis>
+  </animation>
+<animation>
+  <type>pick</type>
+  <object-name>HDG</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-cycle</command>
+        <property>/autopilot/locks/heading</property>
+  <value type="string"></value>
+  <value type="string">dg-heading-hold</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/locks/hdg-button</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>HDG</object-name>
+        <property>/autopilot/locks/hdg-button</property>
+<factor>-0.001</factor>
+<axis><x>0.5</x>
+<z>0.5</z></axis>
+  </animation>
+<animation>
+  <type>pick</type>
+  <object-name>VOR</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-cycle</command>
+        <property>/autopilot/locks/heading</property>
+  <value type="string">dg-heading-hold</value>
+  <value type="string">nav1-hold</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/locks/vor-button</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>VOR</object-name>
+        <property>/autopilot/locks/vor-button</property>
+<factor>-0.001</factor>
+<axis><x>0.5</x>
+<z>0.5</z></axis>
+  </animation>
+</PropertyList>

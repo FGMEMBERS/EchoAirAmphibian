@@ -1,0 +1,8 @@
+<PropertyList>
+<path>lights.ac</path>
+
+<effect>
+<inherits-from>Aircraft/EchoAirJetSet/Models/Effects/text-lightmap</inherits-from>
+<object-name>Cube</object-name>
+</effect>
+</PropertyList>

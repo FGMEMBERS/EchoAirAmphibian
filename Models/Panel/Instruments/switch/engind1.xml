@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>indicator.ac</path>
+
+  
+  <animation>
+    <type>material</type>
+      <object-name>indicator</object-name>
+    <condition>
+      <property>/engines/engine/running</property>
+    </condition>
+    <emission>
+      <red>  0.1 </red>
+      <green> 1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+    <specular>
+      <red>  0.1 </red>
+      <green> 1 </green>
+      <blue>  0.1 </blue>
+    </specular>
+    <diffuse>
+      <red>  0.1 </red>
+      <green> 1 </green>
+      <blue>  0.1 </blue>
+    </diffuse>
+
+    <ambient>
+      <red>  0.1 </red>
+      <green> 1 </green>
+      <blue>  0.1 </blue>
+    </ambient>
+  </animation>
+ 
+
+</PropertyList>

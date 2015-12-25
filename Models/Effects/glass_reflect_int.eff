@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+ <name>Effects/glass_reflect_int</name>
+ <inherits-from>Effects/glass</inherits-from>
+ <parameters>
+<ambient-correction>-0.8</ambient-correction>
+<overlay-glare type="float">0.5</overlay-glare>
+ </parameters>
+</PropertyList>

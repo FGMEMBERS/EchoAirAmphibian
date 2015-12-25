@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+ <name>Effects/interior-lightmap</name>
+ <inherits-from>Effects/model-combined</inherits-from>
+ <parameters><texture n="3">
+<image>Aircraft/EchoAirJetSet/Models/interior_lightmap.png</image>
+<type>2d</type>
+<filter>linear-mipmap-linear</filter>
+<wrap-s>clamp</wrap-s>
+<wrap-t>clamp</wrap-t>
+<internal-format>normalized</internal-format>
+</texture>
+<lightmap-enabled type="int">1</lightmap-enabled>
+<lightmap-multi type="int">0</lightmap-multi>
+<lightmap-factor type="float" n="0">10</lightmap-factor>
+<lightmap-color type="vec3d" n="0"> 1 1 1 </lightmap-color>
+ </parameters>
+</PropertyList>

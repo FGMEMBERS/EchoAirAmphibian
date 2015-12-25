@@ -1,0 +1,8 @@
+##This is the EchoAirAmphibian by D-ECHO, based on the b1900d by Syd Adams and using the lights from the CRJ700 by Ryan Miller##
+##licensed under GPL##
+V1:~100kts
+Vr:130kts
+V2: 140-150kts
+Vcruise: 200-220kts
+Vapp:140kts
+Vstall:~125kts

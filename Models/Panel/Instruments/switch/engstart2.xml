@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>start.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+      <object-name>Circle</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>material</type>
+      <object-name>Circle</object-name>
+    <condition>
+<and>
+      <property>/controls/electric/battery-switch</property>
+<property>/controls/lighting/instrument-lights</property>
+</and>
+    </condition>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.8 </blue>
+    </emission>
+  </animation>
+ 
+  <animation>
+    <object-name>Circle</object-name>
+    <type>translate</type>
+    <property>/controls/switches/starter2</property>
+  <factor>0.005</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  </animation>
+  <!--
+  <animation>
+    <type>pick</type>
+    <object-name>Circle</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/starter</property>
+        <value>3</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>-->
+    <animation>
+    <type>pick</type>
+    <object-name>Circle</object-name>
+    <visible>true</visible>
+    <action>
+      <name>starter</name>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/engines/engine[2]/running</property>
+      </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/starter2</property>
+        </binding>
+    </action>
+  </animation>
+</PropertyList>

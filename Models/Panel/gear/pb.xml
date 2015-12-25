@@ -1,0 +1,42 @@
+<PropertyList>
+<path>pb.ac</path>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>handle.001</object-name>
+        <property>/sim/model/pushback/force</property>
+<offset-deg>50</offset-deg>
+<factor>-100</factor>
+<center>
+<x-m>-0.00225</x-m>
+<z-m>-0.07835</z-m>
+</center>
+<axis><y>100</y></axis>
+  </animation>
+  <animation>
+    <type>slider</type>
+  <object-name>handle.001</object-name>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/sim/model/pushback/force</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Direct Wheel Thruster: %3d%%</label>
+        <measure-text>Direct Wheel Thruster: 100%</measure-text>
+        <tooltip-id>directwheelthruster</tooltip-id>
+        <mapping>percent</mapping>
+        <property>/sim/model/pushback/force</property>
+      </binding>
+    </hovered>
+  </animation>
+</PropertyList>
